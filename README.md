@@ -30,3 +30,18 @@ Execute maven command
 
     mvn exec:java@run-locally
 Or run the class from IDE `com.sample.UserInterestApplication`
+
+## Test data
+
+- Three sample users are created with ids 1,2,3.
+- Sample create request
+```
+curl -X POST 'http://localhost:8900/user/1/interest' \
+-H 'Content-Type: application/json' \
+--data-raw '{
+"type": "CREDIT",
+"name": "Interest 1",
+"region": "Europe",
+"language": "English"
+}'
+```
